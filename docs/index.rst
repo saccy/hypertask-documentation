@@ -1,6 +1,3 @@
-Hypertask
----------
-
 Hypertask documentation
 =======================
 
