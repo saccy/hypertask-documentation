@@ -1,6 +1,15 @@
 Hypertask documentation
-=======================
+-----------------------
 
 .. toctree::
-   :maxdepth: 16
-   docs/user-guide
+   :maxdepth: 2
+   :caption: Contents:
+
+Index
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+* :ref:`docs/user-guide`
+   
