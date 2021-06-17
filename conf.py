@@ -14,6 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
+from recommonmark.parser import CommonMarkParser
 
 
 # -- Project information -----------------------------------------------------
@@ -24,7 +25,6 @@ author = 'Andrew Hudson'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -55,3 +55,11 @@ html_theme = "sphinx_rtd_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
+
+master_doc = 'index'
