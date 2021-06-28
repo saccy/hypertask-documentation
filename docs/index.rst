@@ -11,5 +11,4 @@ Index
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-* :ref:`docs/user-guide`
-   
+* :ref:`user-guide`
