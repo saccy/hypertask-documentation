@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Azure Pipelines &mdash; Hypertask 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PayPal" href="paypal.html" />
+    <link rel="prev" title="Hypertask integrations" href="integrations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Hypertask
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="integrations.html">Hypertask integrations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Azure Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paypal.html">PayPal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Hypertask</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="integrations.html">Hypertask integrations</a> &raquo;</li>
+        
+      <li>Azure Pipelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/azp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-pipelines">
+<h1>Azure Pipelines<a class="headerlink" href="#azure-pipelines" title="Permalink to this headline">¶</a></h1>
+<p>Azure pipelines are offered as products to your customers.</p>
+<p>In order to import an Azure DevOps account, navigate to the <code class="docutils literal notranslate"><span class="pre">Integrations</span></code> view, select Azure DevOps from the dropdown and then select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Azure</span> <span class="pre">DevOps</span> <span class="pre">account</span></code>.
+You will need to provide your Azure DevOps organization, project and PAT. The PAT provided needs to be able to run your pipelines and download pipeline artifacts.</p>
+<p>Once you’ve added an ADO account you can start importing pipelines.</p>
+<p>Currently, Hypertask only supports pipelines that use Azure Git as their pipeline source, i.e. you’ll need to create an ADO git repo in the same project as your pipeline and use that as your source.
+Addtionaly, only repo’s that have a <code class="docutils literal notranslate"><span class="pre">hypertask_params.json</span></code> file in their root will be identified as available for importation.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">hypertask_params.json</span></code> file for a free pipeline must be in this format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;short_desc&quot;</span><span class="p">:</span> <span class="s2">&quot;An example of a free product&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;long_desc&quot;</span><span class="p">:</span> <span class="s2">&quot;It might not look like much, but this task runs an Azure Pipeline in the background that produces an artifact based on your inputs. You can download the artifact right here on hypertask after the task completes by navigating to the &#39;Manage orders&#39; section under the account drop-down. You can also run an associated pipeline from the same page.&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;free&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;inventory_group&quot;</span><span class="p">:</span> <span class="s2">&quot;Examples&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[],</span>
+   <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;choices_example&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;friendly_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Choices example&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="s2">&quot;Choose a greeting. This is an example of a list of choices.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;choices_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+               <span class="s2">&quot;Hello&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;Bonjour&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;G&#39;day&quot;</span>
+            <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;string_example&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;friendly_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Input example&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="s2">&quot;Who are you greeting? This is an example of a string input.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;World!&quot;</span>
+      <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="s2">&quot;artifacts&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Test artifact&quot;</span><span class="p">:</span> <span class="s2">&quot;artifact.txt&quot;</span>
+   <span class="p">},</span>
+   <span class="s2">&quot;supplemental_pipelines&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Supplement example&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;def_id&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;Runs a pipeline that downloads the artifact from the original build and cats the content.&quot;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="paypal.html" class="btn btn-neutral float-right" title="PayPal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="integrations.html" class="btn btn-neutral float-left" title="Hypertask integrations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Andrew Hudson.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
