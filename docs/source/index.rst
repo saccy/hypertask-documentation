@@ -17,4 +17,3 @@ In the future, additional compute backends (i.e. AWS Lambda) and additional paym
    :caption: Contents:
    
    integrations
-   license
