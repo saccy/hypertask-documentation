@@ -1,6 +1,8 @@
 Azure Pipelines
 ===============
 
+NOTE: This documentation is being actively updated.
+
 Azure Pipelines are offered as products to your customers.
 
 You can offer them in 3 ways:
