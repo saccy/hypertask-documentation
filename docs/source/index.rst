@@ -6,6 +6,8 @@
 Hypertask documentation
 =======================
 
+NOTE: This documentation is being actively updated.
+
 Hypertask is a frontend that allows you to productize your Azure Pipelines.
 By integrating with PayPal, customers can pay to run your Azure Pipelines via a one-off transaction or as a monthly recurring subscription fee.
 You can also allow customers to run your pipelines for free.
