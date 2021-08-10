@@ -4,6 +4,7 @@ Azure Pipelines
 Azure Pipelines are offered as products to your customers.
 
 You can offer them in 3 ways:
+
 * Free: No restriction, guest users can run.
 * One-off purchases: Users must register/log in in order to purchase and run.
 * Subscriptions: Users must register/log in in order to purchase and run.
@@ -56,7 +57,9 @@ The ``hypertask_params.json`` file for a free pipeline must be in this format::
       }
    }
 
+
 The ``hypertask_params.json`` file for a one-off purchase pipeline must be in this format::
+
    {
       "name": "AWS web app stack",
       "short_desc": "An example of a one off purchase",
@@ -87,7 +90,9 @@ The ``hypertask_params.json`` file for a one-off purchase pipeline must be in th
       }
    }
 
+
 The ``hypertask_params.json`` file for a subscription pipeline must be in this format::
+
    {
       "name": "VPN",
       "short_desc": "Deploys a secure, managed VPN server that you will have exclusive access to. No lock in, cancel at any time",
